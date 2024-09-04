@@ -17,6 +17,7 @@ const insertPerson = async () => {
   try {
     const insertQuery = 'INSERT INTO people (name) values ("Ivonei")'
     await pool.query(insertQuery)
+    console.log('Person inserted')
   } catch (err) {
     console.error('Error inserting people', err)
   }
