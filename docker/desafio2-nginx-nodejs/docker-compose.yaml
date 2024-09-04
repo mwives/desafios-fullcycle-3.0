@@ -26,6 +26,17 @@ services:
     ports:
       - '3306:3306'
 
+  nginx:
+    build:
+      context: nginx
+    container_name: fullcycle_nginx
+    ports:
+      - 8080:80
+    networks:
+      - fullcycle-network
+    depends_on:
+      - nodejs
+
 networks:
   fullcycle-network:
     driver: bridge
