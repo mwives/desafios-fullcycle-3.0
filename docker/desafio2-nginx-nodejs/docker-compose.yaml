@@ -17,6 +17,7 @@ services:
       MYSQL_DATABASE: fullcycle
     volumes:
       - ./mysql-init:/docker-entrypoint-initdb.d
+      - ./mysql-data:/var/lib/mysql
     networks:
       - fullcycle-network
     healthcheck:
