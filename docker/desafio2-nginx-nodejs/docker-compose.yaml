@@ -3,6 +3,8 @@ services:
     build:
       context: nodejs
     container_name: fullcycle_nodejs
+    volumes:
+      - ./nodejs:/app
     networks:
       - fullcycle-network
     depends_on:
